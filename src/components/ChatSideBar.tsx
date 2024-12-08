@@ -55,9 +55,9 @@ const ChatSideBar = ({ chats, chatId, isPro }: Props) => {
   };
 
 
-  useEffect(() => {
-    setChatstoShow(chats);
-  }, [chats]);
+  // useEffect(() => {
+  //   setChatstoShow(chats);
+  // }, [chats]);
 
   return (
     <div className="relative w-full h-screen p-4 text-gray-200 bg-black overflow-hidden">

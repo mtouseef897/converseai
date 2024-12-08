@@ -17,6 +17,7 @@ import { auth } from "@clerk/nextjs/server";
 import { eq } from "drizzle-orm";
 import { ArrowRight, CrownIcon, LogIn } from "lucide-react";
 import Link from "next/link";
+
 export default async function Home() {
   const { userId } = await auth();
   let isPremiumUser = false;
