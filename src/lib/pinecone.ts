@@ -66,7 +66,8 @@ export const getPineconeClient = () => {
     if (!fileName) {
       throw new Error("Could not download from S3");
     }
-  
+    console.log("fileKey File",fileKey)
+  console.log("Downloaded File",fileName)
     const fileType = fileKey.split('.').pop() as string; // Get file extension
     const pages = await loadDocument(fileName, fileType) as PDFPage[];
 
