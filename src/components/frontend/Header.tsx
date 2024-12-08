@@ -2,8 +2,9 @@ import { UserButton } from "@clerk/nextjs";
 import { CrownIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import AccountButton from "./MyAccount";
 
-const Header = ({isPremiumUser=false}:{isPremiumUser?:boolean}) => {
+const Header = ({ isPremiumUser = false }: { isPremiumUser?: boolean }) => {
   const menu = [
     {
       label: "Home",
@@ -52,6 +53,7 @@ const Header = ({isPremiumUser=false}:{isPremiumUser?:boolean}) => {
           {isPremiumUser && (
             <CrownIcon className="ml-2 text-yellow-600 text-base" />
           )}
+
           <button className="px-8 py-3 bg-black hover:bg-accent duration-200 ease-in-out text-white text-base font-bold rounded-full">
             My Account
           </button>

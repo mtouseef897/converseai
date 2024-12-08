@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Vector from "/public/vector.png";
 import Image from "next/image";
+import FeedbackForm from "../FeedbackForm";
 
 const Footer = () => {
   const menu = [
@@ -55,7 +56,7 @@ const Footer = () => {
   ];
 
   return (
-    <div>
+    <div className="bg-[#f5f5f5]">
       <div className="flex items-center justify-around py-20 bg-[url('/footershape.png')] bg-contain bg-right bg-no-repeat">
         <div className="w-12 h-12 md:w-16 md:h-16 relative">
           <Image
@@ -133,8 +134,9 @@ const Footer = () => {
         </ul>
 
         <div>
-          <div className="font-bold ">Subscribe to our newsletter</div>
-          <div className="border-2 border-black rounded-full px-2 py-1 flex items-center justify-between mt-4">
+          {/* <div className="font-bold ">Subscribe to our newsletter</div> */}
+          <div className="font-bold ">Submit your feedback here</div>
+          {/* <div className="border-2 border-black rounded-full px-2 py-1 flex items-center justify-between mt-4">
             <input
               type="text"
               className="border-none outline-none"
@@ -143,7 +145,8 @@ const Footer = () => {
             <button className="px-4 py-2 bg-black text-white text-base font-bold rounded-full">
               <ArrowRight />
             </button>
-          </div>
+          </div> */}
+          <FeedbackForm/>
         </div>
       </div>
       <div className="content-container flex items-center justify-between h-[80px] border-t ">

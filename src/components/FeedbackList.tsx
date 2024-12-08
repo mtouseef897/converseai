@@ -3,6 +3,7 @@
 import { Star } from "lucide-react";
 import Link from "next/link";
 import { FC } from "react";
+import { FaStar } from "react-icons/fa6";
 
 interface Feedback {
   id: number;
@@ -28,17 +29,17 @@ const FeedbackList = async () => {
 
   return (
     <>
-      {feedbacks?.slice(0, 5).map((feedback) => (
+      {feedbacks?.slice(0, 6).map((feedback) => (
         <li
           key={feedback.id}
           className="p-8 border border-[#191919]  flex flex-col items-start justify-start gap-4 max-w-sm rounded-xl shadow-md"
         >
-          <div className="flex items-center justify-start gap-2 text-accent">
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
+          <div className="flex items-center justify-start gap-2 text-accent text-xl">
+            <FaStar/>
+            <FaStar/>
+            <FaStar/>
+            <FaStar/>
+            <FaStar/>
           </div>
           <p className="text-gray-500">{feedback.content}</p>
           <span className="flex items-center justify-start gap-4">

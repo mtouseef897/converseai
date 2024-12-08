@@ -128,7 +128,7 @@ const ChatSideBar = ({ chats, chatId, isPro }: Props) => {
           </Button>
         </Link>
         {!isPro && (
-          <Link href="/subscription/plans" className="">
+          <Link href="/pricing" className="">
             <Button className="w-full border-gray-200 border mb-4 hover:bg-gray-50/[0.34] ">
               <CrownIcon className="mr-2 w-4 h-4" />
               Upgrade Plan

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { ArrowRight } from "lucide-react";
 
 const FeedbackForm = () => {
   const [content, setContent] = useState("");
@@ -32,17 +33,20 @@ const FeedbackForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full border flex-col items-end justify-start gap-8 flex mt-8 max-w-md mx-auto bg-white rounded-xl p-8 overflow-hidden "
+      className="w-full  flex-col items-end justify-start gap-4 flex mt-4   rounded-xl  overflow-hidden "
     >
       <textarea
         value={content}
         onChange={(e) => setContent(e.target.value)}
         placeholder="Write your feedback here..."
         required
-        className="w-full border border-gray-200 p-2"
+        className="w-full border border-gray-200 p-2 rounded-xl "
       />
-      <button type="submit" className="bg-black text-white  p-4 py-2 ">
-        Submit Feedback
+      <button
+        type="submit"
+        className="px-4 py-2 bg-black text-white text-base font-bold rounded-full flex items-center justify-center gap-2"
+      >
+        <span>Submit</span> <ArrowRight />
       </button>
     </form>
   );

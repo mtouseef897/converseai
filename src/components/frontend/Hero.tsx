@@ -15,7 +15,7 @@ const Hero = ({
 }) => {
   return (
     <div>
-      <div className=" flex flex-col items-center justify-center text-center gap-12 py-24 bg-[url('/heroshape.png')]  bg-right bg-no-repeat">
+      <div className=" flex flex-col items-center justify-center text-center gap-12 py-24 bg-[url('/heroshape.png')]  bg-right bg-no-repeat bg-[#f5f5f5]">
         <div className="">
           <div className="font-bold text-4xl md:text-xl lg:text-7xl leading-0 tracking-[-2px] max-w-[1200px]">
             Unlock the Power of Your Documents with Converse AI
@@ -34,7 +34,7 @@ const Hero = ({
                   Go to Chats
                 </button>
               </a>
-              <a href={`/`}>
+              <a href={`/pricing`}>
                 <button className="px-8 py-5 bg-white border-2 border-black hover:border-accent hover:text-accent duration-200 ease-in-out  text-sm font-bold rounded-full">
                   Manage Subscriptions
                 </button>
