@@ -13,7 +13,7 @@ interface Feedback {
 
 // Fetch feedbacks in this file as well
 async function getFeedbacks(): Promise<Feedback[]> {
-  const response = await fetch("http://localhost:3000/api/get-feedback", {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_DOMAIN}/api/get-feedback`, {
     cache: "no-store",
   });
 

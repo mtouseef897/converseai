@@ -18,7 +18,7 @@ const ShareChatButton: FC<ShareChatButtonProps> = ({ chatId }) => {
       const response = await axios.post("/api/share-chat", { chatId });
       if (response.status === 200 || response.status === 201) {
         const linkID = response.data.sharedLink;
-        const newSharedLink = `http://localhost:3000/shared-chat/${linkID}`;
+        const newSharedLink = `${process.env.NEXT_PUBLIC_DOMAIN}/shared-chat/${linkID}`;
         navigator.clipboard.writeText(newSharedLink);
         toast.success("Shareable link copied to clipboard!");
       }
