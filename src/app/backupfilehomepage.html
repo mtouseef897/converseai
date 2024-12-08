@@ -1,0 +1,46 @@
+  <div className="">
+        <div className="max-w-md mx-auto flex flex-col items-center justify-center">
+          <div className="flex items-center">
+            <h1 className="mr-3 text-5xl font-semibold">Converse Ai</h1>
+            <UserButton afterSignOutUrl="/" />
+            {isPremiumUser && (
+              <CrownIcon className="ml-2 text-yellow-600 text-base" />
+            )}
+          </div>
+          <div className="flex mt-2 gap-2">
+            {isAuth && firstChat && (
+              <>
+                <a href={`/chat/${firstChat.id}`}>
+                  <Button>
+                    Go to Chats <ArrowRight className="ml-2" />
+                  </Button>
+                </a>
+              </>
+            )}
+            {/* <a href="/feedbacks">
+              <Button className="bg-transparent text-black border border-black hover:bg-black hover:text-white">
+                View Users Feedback <ArrowRight className="ml-2" />
+              </Button>
+            </a> */}
+          </div>
+          <p className="max-w-xl mt-2 text-lg text-slate-600">
+            {" "}
+            join million of students researcher and professionals to instantly
+            answer question and understand it
+          </p>
+          <div className="w-full mt-4 text-center">
+            {isAuth ? (
+              <FileUpload isPro={isPremiumUser} />
+            ) : (
+              <a href="sign-in">
+                <Button>
+                  Login to get Started!
+                  <LogIn className="w-4 h-4 ml-2" />
+                </Button>
+              </a>
+            )}
+          </div>
+        </div>
+        {/* <FeedbackList /> */}
+        {/* {isAuth && <FeedbackForm />} */}
+      </div>
