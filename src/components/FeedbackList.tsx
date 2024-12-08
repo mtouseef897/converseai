@@ -1,6 +1,7 @@
 // FeedbackList.tsx
 
 import { Star } from "lucide-react";
+import { cookies } from "next/headers";
 import Link from "next/link";
 import { FC } from "react";
 import { FaStar } from "react-icons/fa6";
@@ -25,6 +26,7 @@ async function getFeedbacks(): Promise<Feedback[]> {
 
 // Server Component: Fetch feedback data directly in the component
 const FeedbackList = async () => {
+  cookies();
   const feedbacks = await getFeedbacks(); // Fetch feedbacks on the server side
 
   return (
