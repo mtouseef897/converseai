@@ -110,14 +110,20 @@ const FileUpload = (props: Props) => {
             />
           ) : (
             <>
-              <p className="text-lg text-gray-800  text-blue capitalize">Drop File here</p>
+              <p className="text-lg text-gray-800  text-blue capitalize">
+                Drop File here
+              </p>
               {!props.isPro && (
                 <p className="text-xs text-gray-800 text-blue">
                   ( Max Limit {process.env.NEXT_PUBLIC_FREE_PLAN_FILE_LIMIT} MB
                   )
                 </p>
               )}
-
+              {props.isPro && (
+                <p className="text-xs text-gray-800 text-blue">
+                  ( File Upto 10 MB )
+                </p>
+              )}
             </>
           )}
         </>
